@@ -6,10 +6,23 @@
 </head>
 <body>
 
-<from>
-  <h1>Login</h1>
-  <input type="text">
-  <input type="text">
-</from>
+<form name="login-form" id="login-form">
+  <input type="text" name="username">
+  <input type="text" name="password">
+  <button type="button" name="button" class="form narrow-form">Login</button>
+</form>
+
 </body>
+
+<script type="text/javascript">
+document.querySelector('.form.narrow-form').addEventListener('click', event => {
+  event.preventDefault();
+
+  document
+  .write(`<h1 class="ui button white large fluid primary button">Logged in</h1>
+          <button class="user-menu">john</button>
+          <a class="item" href="">Logout</a>`)
+  return false;
+});
+</script>
 </html>

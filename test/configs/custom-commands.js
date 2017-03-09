@@ -99,7 +99,7 @@ module.exports = (browser, capabilities, specs) => {
       browser.goToUrl('/#login');
       browser.setValueSafe('[name="username"]', user);
       browser.setValueSafe('[name="password"]', user);
-      browser.submitForm('.form.narrow-form');
+      browser.findAndClick('button.form.narrow-form');
       if (user == "john") {
         // Teacher.
         browser.waitForVisible('.ui.button.white');
